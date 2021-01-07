@@ -1,0 +1,25 @@
+@charset "utf-8";
+@media screen and (max-width: 320px){
+	.logo{
+		font-size: 16px;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	main{
+	/* [disabled]margin-left: 16px; */
+	/* [disabled]margin-right: 16px; */
+	/* [disabled]display: flex; */
+	}
+	
+	.background-sections .stoimost,.background-sections p{
+		font-size: 8px;
+	}
+	
+	/*.background-sections{
+		flex-direction: column;
+	}
+	.wrap_section_item:nth-child(2){
+		margin-left: 10px;
+		margin-right: 10px;
+	}*/
+}
