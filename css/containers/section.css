@@ -1,0 +1,45 @@
+.background-sections {
+	background-color: #C0C0C0;
+	border-radius: 10px;
+	text-align: center;
+	margin-bottom: 30px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+.background-sections a {
+	background-color: #FFFFFF;
+	display: block;
+	padding-top: 20px;
+	padding-right: 10px;
+	padding-bottom: 20px;
+	padding-left: 10px;
+	text-decoration: none;
+	border-radius: 5px;
+	border: 2px solid #000000;
+}
+.background-sections p {
+	padding-top: 20px;
+	margin: 0px;
+	color: #000000;
+}
+.background-sections#gallery-block {
+	display: flex;
+	position: relative;
+	justify-content: center;
+	padding-right: 20px;
+	padding-left: 20px;
+}
+.background-sections#provider-block {
+	display: flex;
+	flex-grow: 1;
+	justify-content: space-between;
+	padding-right: 20px;
+	padding-left: 20px;
+
+}
+.background-sections.map-block {
+	padding-right: 20px;
+	padding-left: 20px;
+	text-align: left;
+	display: flex;
+}

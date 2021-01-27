@@ -1,0 +1,43 @@
+header {
+	position: fixed;
+	z-index: 3;
+	width: 100%;
+	top: 0px;
+}
+.main-telephone {
+	display: flex;
+	align-items: center;
+	height: 50px;
+	background-color: #FFFFFF;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.filial-telephone{
+	width: 33%;
+}
+.filial-telephone p,.filial-telephone a{
+	text-align: center;
+	text-decoration: underline;
+}
+.header-contact-telephone {
+	display: block;
+	color: #000000;
+}
+.header-inner {
+	display: flex;
+	background-color: #FFFFFF;
+	height: 90px;
+}
+.logo {
+	background-color: #75bc41;
+	width: 22%;
+	min-width: 270px;
+	color: #FFFFFF;
+	font-size: 35px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-bottom-right-radius: 10px;
+	border-top-right-radius: 10px;
+	text-decoration: none;
+}

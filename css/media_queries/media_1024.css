@@ -1,0 +1,432 @@
+@media screen and (max-width: 1024px) /* and (orientation : portrait) */ /* and (max-aspect-ratio: 13/9) */ {
+		
+	/*ШАПКА САЙТА*/
+	.header-inner{
+		justify-content: space-between;
+	}
+	.menu_button{
+		display: flex;
+		align-self: center;
+		align-items: center;
+		color: white;
+		background-color: #000000;
+		margin-right: 16px;
+		border-radius: 5px;
+		cursor: pointer;
+		min-height: 24px;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		padding-right: 10px;
+	}
+	.menu_button_active{
+		background-color: #75BC41;		
+	}
+	.zamer_button{
+		padding-left: 30px;
+		background-image: url(../img/img_metering_24.png);
+		background-repeat: no-repeat;
+		background-position: 10px center;
+		display: flex;
+		align-self: center;
+		align-items: center;
+		color: white;
+		background-color: #000000;
+		margin-right: 16px;
+		border-radius: 5px;
+		cursor: pointer;
+		min-height: 24px;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		padding-right: 10px;
+	}
+	.zamer_button_active{
+		padding-left: 0px;
+		background-image: none;
+		background-color: #75bc41;
+		
+	}
+	.zamer_button_active::before{
+		font-size: 20px;
+		content: "close";
+		font-family: "Material Icons";
+		padding-left: 10px;
+	}
+	.zamer_button>p,.menu_button>p,.search>p{
+		margin-top: 0px;
+		margin-right: 0px;
+		margin-bottom: 0px;
+		display: block;
+		color: white;
+		margin-left: 10px;
+	}
+	.search{
+		color: #FFFFFF;
+		align-items: center;
+		border-radius: 5px;
+		border: none;
+		background-color: #000000;
+		padding-left: 10px;
+		padding-top: 10px;
+	    padding-bottom: 10px;
+		padding-right: 10px;
+		
+	}
+/*	.search::before{
+		font-size: 20px;
+		content: "search";
+		font-family: "Material Icons";
+	}*/
+	.search_active{
+		background-image: none;
+		background-color: #75bc41;
+	}
+	.search_active::before{
+		font-size: 20px;
+		content: "close";
+		font-family: "Material Icons";
+	}
+	
+	.material-icons.white { color: #ffffff; }
+	.material-icons.black { color: #000000; }
+	.search > input[type="text"]{
+	display: none;
+	}
+	
+	/*СТИЛИ ДЛЯ КНОПКИ МЕНЮ ГАМБУРГЕРА*/
+	.c-hamburger {
+		display: block;
+		position: relative;
+		overflow: hidden;
+		margin-top: 0;
+		margin-right: 0;
+		margin-left: 10px;
+		margin-bottom: 0;
+		padding: 0;
+		width: 20px;
+		height: 21px;
+		font-size: 0;
+		text-indent: -9999px;
+		appearance: none;
+		box-shadow: none;
+		border-radius: none;
+		border: none;
+		cursor: pointer;
+		transition: background 0.3s;
+	}
+
+	.c-hamburger:focus {
+		outline: none;
+	}
+	.c-hamburger span {
+		display: block;
+		position: absolute;
+		top: 9px;
+		left: 0px;
+		right: 0px;
+		height: 3px;
+		background: white;
+	}
+
+	.c-hamburger span::before,
+	.c-hamburger span::after {
+	  position: absolute;
+	  display: block;
+	  left: 0;
+	  width: 100%;
+	  height: 3px;
+	  background-color: #fff;
+	  content: "";
+	}
+
+	.c-hamburger span::before {
+	  top: -9px;
+	}
+
+	.c-hamburger span::after {
+	  bottom: -8px;
+	}
+	
+	.c-hamburger--htx {
+	  /*background-color: #000000;*/
+	}
+
+	.c-hamburger--htx span {
+	  transition: background 0s 0.3s;
+	}
+
+	.c-hamburger--htx span::before,
+	.c-hamburger--htx span::after {
+	  transition-duration: 0.3s, 0.3s;
+	  transition-delay: 0.3s, 0s;
+	}
+
+	.c-hamburger--htx span::before {
+	  transition-property: top, transform;
+	}
+
+	.c-hamburger--htx span::after {
+	  transition-property: bottom, transform;
+	}
+
+	/* состояние active при открытом меню  */
+	.c-hamburger--htx.is-active {
+	  /*background-color: #cb0032;*/
+	}
+
+	.c-hamburger--htx.is-active span {
+	  background: none;
+	}
+
+	.c-hamburger--htx.is-active span::before {
+	  top: 0;
+	  transform: rotate(45deg);
+	}
+
+	.c-hamburger--htx.is-active span::after {
+	  bottom: 0;
+	  transform: rotate(-45deg);
+	}
+
+	.c-hamburger--htx.is-active span::before,
+	.c-hamburger--htx.is-active span::after {
+	  transition-delay: 0s, 0.3s;
+	}
+	/*СТИЛИ ДЛЯ КНОПКИ МЕНЮ ГАМБУРГЕРА*/
+	
+	/*БЛОК, ЗАТЕМНЯЮЩИЙ КОНТЕНТ*/
+	.transparent_block{
+		display: none;
+		position: absolute;
+		background-color: #9b999c;
+		opacity: .85;
+		z-index: 2;
+		bottom: 0px;
+		right: 0px;
+		left: 0px;
+		top: 0px;
+	}
+	
+	.transparent_block_visible{
+		display: block;
+	}
+	
+	/*СТИЛИ ДЛЯ МЕНЮ ПОИСКА*/
+	.search_popup_menu_active{
+		display: block;
+		position: absolute;
+		z-index: 2;
+		background-color: #c0c0c0;
+		width: 100%;
+		border-bottom-left-radius: 10px;
+		border-bottom-right-radius: 10px;
+		border-left: 2px solid #000000;
+		border-right: 2px solid #000000;
+		border-bottom: 2px solid #000000;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		padding: 16px;
+	
+	}
+	.form_search{
+		width: 100%;
+		border-radius: 10px;
+		border: 2px solid #000000;
+		background-color: #FFFFFF;
+		display: flex;
+	}
+	.search_popup_menu input[type="text"]{
+		font-size: 18px;
+		flex-grow: 1;
+		border-left: 2px solid #000000;
+		margin: 0px;
+		border-radius: 0px;
+		padding: 0px;
+	}
+	
+	/*СТИЛИ ДЛЯ МЕНЮ ВЫЗОВА ЗАМЕРЩИКА*/
+	.vizov_zamer{
+		display: none;
+	}
+	.vizov_zamer_active{
+		display: block;
+		position: absolute;
+		z-index: 2;
+		margin-left: auto;
+		margin-right: auto;
+		left: 0;
+		right: 0;
+		border: 2px solid #000000;
+		background-repeat: no-repeat;
+	}
+	
+	/*СТИЛИ ДЛЯ БОКОВОГО МЕНЮ*/
+	.wrap_top_menu{
+		display: none;
+		top: 0px;
+	}
+	.wrap_top_menu a{
+		color: #000000;
+	}
+	.wrap_top_menu_active{
+		display: flex;
+		justify-content: center;
+		position: absolute;
+		z-index: 2;
+		width: 100%;
+		margin-left: 0px;
+	    margin-right: 0px;
+		padding-left: 16px;
+		padding-right: 16px;
+		border-left: 2px solid #000000;
+		border-right: 2px solid #000000;
+		border-bottom: 2px solid #000000;
+		background-color: #FFFFFF;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+	.menu{
+		flex-direction: column;
+		margin-top: 5px;
+	}
+	.menu>li{
+		display: flex;
+		flex-grow: 1;
+		flex-direction: column;
+		margin-top: 5px;
+		margin-bottom: 0px;
+	}
+	.menu>li:last-child{
+		margin-bottom: 5px;
+	}
+	.menu a.is-submenu::after{
+	    display: none;
+    }
+	.item {		
+		border: 2px solid #000000;
+		background-color: #C0C0C0;
+		border-radius: 5px;
+		height: 50px;
+		font-size: 16px;
+		text-decoration: none;
+		color: #000000;
+		/* justify-content: space-between; */
+	}
+/* 	.item::before,.item::after{
+		display: flex;
+		align-self: stretch;
+		content: "+";
+		padding-left: 15px;
+		padding-top: 8px;
+		padding-right: 15px;
+		font-size: 25px;
+		background-color: #AEAEAE;		
+	} */
+
+	/*добавлено из разрешения глобального - отредактировать*/
+	.submenu{
+		display: block;
+		padding-left: 30px;
+		padding-right: 30px;
+		position: static;
+		left: 0px;
+	}
+	.submenu li{
+		height: auto;
+		box-sizing: border-box;
+		border: none;
+		margin-top: 5px;
+	}
+	.submenu a{
+		/*justify-content: space-between;*/
+	    background-color:#ddd9d9;
+		text-align: center;
+		font-size: 16px;
+		color: #000000;
+		width: 100%;
+		height: 50px;
+		box-sizing: border-box;
+		border: 2px solid #000000;
+		border-radius: 5px;
+	}
+	.submenu a:hover{
+		background-color: #75bc41;
+		color: #000000;
+	}
+	
+	.menu li:hover{
+		background-color: transparent;
+	}
+
+	/*КОНЕЦ ШАПКИ САЙТА*/
+	
+	
+	/*КОНТЕНТ САЙТА*/
+	.content_main{
+		margin-left: 16px;
+	}
+	.background-sections{
+		margin-bottom: 20px;
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+	
+	/*ФУТЕР САЙТА*/
+	.footer-right{
+		font-size: 10px;
+	}
+	.footer-left{
+		margin-left: 16px;
+		font-size: 10px;
+	}
+	
+	/*КНОПКИ ЗВОНОК,WATSAPP*/
+	.feedback_main{
+		display: flex;
+		align-items: center;
+		text-align: center;
+		position: fixed;
+		z-index: 2;
+		bottom: 20px;
+		right: 20px;
+		width: 70px;
+		height: 70px;
+		background-color: #75bc41;
+		border-radius: 70px;
+		font-size: 14px;
+		color: #FFFFFF;
+		font-weight: bold;
+	}
+	.feedback_call {
+		position: fixed;
+		z-index: 2;
+		bottom: 110px;
+		right: 30px;
+		background-color: #75bc41;
+	    border-radius: 50px;
+		width: 50px;
+		height: 50px;
+		background-position: center center;
+	    background-repeat: no-repeat;
+	    background-size: 35px 35px;
+		background-image:url(../img/telephone.svg);
+	   
+
+	}
+	.feedback_watsapp {
+		position: fixed;
+		z-index: 2;
+		bottom: 40px;
+		right: 30px;
+		background-color: #75bc41;
+		border-radius: 50px;
+		width: 50px;
+		height: 50px;
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: 50px 50px;
+		background-image: url(../img/whatsapp_icon-icons.com_66931.svg);
+	}
+	
+}

@@ -1,0 +1,19 @@
+main {
+	display: flex;
+	align-items: flex-start;
+	margin-top: 170px;
+	position: relative;
+}
+.content_main{
+	display: flex;
+	flex-grow: 1;
+	flex-direction: column;
+	width: 70%;
+	margin-right: 16px;
+	box-sizing: border-box;
+}
+.catalog{
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}

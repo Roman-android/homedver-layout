@@ -1,0 +1,10 @@
+@media screen and (max-width: 768px) and (orientation : landscape)and (min-aspect-ratio: 13/9) {
+	.zamer_button>p,.menu_button>p,.search>p{
+		display: block;
+	}
+	.table-point-delivery div,.table-cost-delivery div {
+		padding-left: 10px;
+		padding-right: 10px;
+		font-size: 16px;
+	}
+}

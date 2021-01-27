@@ -1,0 +1,48 @@
+/*СТИЛИ ДЛЯ СТРАНИЦЫ ДОСТАВКИ*/
+.background-sections#delivery-block{
+	display: flex;
+	justify-content: space-between;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+.table-delivery-wrapper{
+	border: 2px solid #000000;
+	display: inline-flex;
+}
+/*добавлен table-header*/
+.item-delivery:first-child,.table-header{
+	background-color: #FFFFFF;
+	border-bottom: 2px solid #000000;
+/*	padding-top: 10px;
+	padding-bottom: 10px;*/
+}
+/*добавлен table-header*/
+/*
+.item-delivery,.table-header {
+	padding-top: 10px;
+	padding-left: 20px;
+	padding-bottom: 10px;
+	padding-right: 20px;
+}
+*/
+.table-point-delivery{
+	border-right: 2px solid #000000;
+}
+.table-point-delivery div,.table-cost-delivery div{
+	padding-top: 10px;
+	padding-left: 20px;
+	padding-bottom: 10px;
+	padding-right: 20px
+}
+.cost_door_leaf {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-size: 16px;
+	color: red;
+	text-align: center;
+	text-decoration: underline;
+}
+.description_item {
+	margin-top: 20px;
+	text-align: justify;
+}

@@ -1,11 +1,11 @@
 <!doctype html>
-<html><!-- InstanceBegin template="/Templates/index.dwt" codeOutsideHTMLIsLocked="false" --><head>
+<html><head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-<!-- InstanceBeginEditable name="EditRegion2" -->
-	<title>Контакты</title>
-<!-- InstanceEndEditable -->
+<!-- TemplateBeginEditable name="EditRegion2" -->
+	<title>Монтаж дверей, окон, потолков</title>
+<!-- TemplateEndEditable -->
 
 <!-- Yandex.Вебмастер -->
 <meta name="yandex-verification" content="a116df44fb47a8d3" />
@@ -35,13 +35,13 @@
 <link href="slick/slick-theme.css" rel="stylesheet" type="text/css">
 <!--//Подключаем галлерею на главной странице-->
 	
-<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
 <script 
 		src="https://api-maps.yandex.ru/2.1/?apikey=13472c08-1a1b-4ec9-a1fd-49e8f75f30c9&lang=ru_RU" 
 		type="text/javascript">
 </script>
-<script type="text/javascript" src="js/maps_script.js"></script>
-<script type="text/javascript" src="js/menu-dropdown.js"></script>
+<script type="text/javascript" src="../js/maps_script.js"></script>
+<script type="text/javascript" src="../js/menu-dropdown.js"></script>
 
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">	
@@ -100,100 +100,9 @@
 
 	<div class="separator"></div>
 </header>
-<!-- InstanceBeginEditable name="EditRegion1" -->
+<!-- TemplateBeginEditable name="EditRegion1" -->
 
-<main>
-	<div class="transparent_block"></div>
-
-    <div class="search_popup_menu">
-		<form class="form_search">
-			<i class="material-icons black">search</i>
-			<input type="text" class="but_search">
-			<i class="material-icons black">close</i>
-		</form>
-	</div>
-    <section class="vizov_zamer">
-		<h3>Форма для быстрого ответа либо вызова замерщика:</h3>
-		<form class="form_user">
-			<input type="text" placeholder="Ваше имя">
-			<input type="text" placeholder="Ваш телефон">
-			<textarea placeholder="Ваше сообщение"></textarea>
-			<input type="submit" class="but_send_metric" value="ОТПРАВИТЬ">
-		</form>
-    </section>
-	
-	<div class="content_main">
-	
-<!--    <h1>
-          Сайт находится в разработке!!!
-        </h1> 
--->
-
-<!--		
-        <a class="test" href="tel:+79043846566">Позвонить</a>
-	    <a class="test" href="https://wa.me/79043846566">Написать</a>
-        <div class="button">Получить результат</div>
-        <div class="test_ajax">Результат запроса</div>
--->
-		<div class="link-to-page">
-			<a href="index.html">Главная</a> - 
-			<a href="contacts.html">Контакты</a>
-		</div>
-	  <!--Разметка для блока с картой-->
-		<section class="background-sections map-block">
-			<div class="map" id="map_1"></div>  
-			<div class="communication">
-				<div class="name-company">ООО “HomeДвери”</div>
-
-				<div class="address">Наш адрес: 
-					<p class="addres-text">ТК Арамильский привоз, г. Арамиль, ул. Пролетарская, 82</p>
-					<p class="contact-telefon">+7 (922)212 06 07</p>
-				</div>
-
-				<div class="contact">Наши контакты:
-					<p class="contact-mail">homedver@mail.ru</p>
-				</div>
-			</div>
-		</section>
-		
-		<section class="background-sections map-block">
-			<div class="map" id="map_2"></div>  
-			<div class="communication">
-				<div class="name-company">ООО “HomeДвери”</div>
-
-				<div class="address">Наш адрес:
-					<p class="addres-text">ТК Сельский привоз, г. Арамиль, ул. Пролетарская, 82/7</p>
-					<p class="contact-telefon">+7 (982)667 54 58</p>
-				</div>
-
-				<div class="contact">Наши контакты:
-					<p class="contact-mail">homedver@mail.ru</p>
-				</div>
-			</div>
-		</section>
-		
-		<section class="background-sections map-block">
-			<div class="map" id="map_3"></div>  
-			<div class="communication">
-				<div class="name-company">ООО “HomeДвери”</div>
-
-				<div class="address">Наш адрес:
-					<p class="addres-text">ТК Колхозный двор, г. Екатеринбург, пос. Горный Щит,Полевской тракт, ул. Буденного, 87, пав. 34</p>
-					<p class="contact-telefon">+7 (932)602 85 85</p>
-				</div>
-
-				<div class="contact">Наши контакты:
-					<p class="contact-mail">homedver@mail.ru</p>
-				</div>
-			</div>
-		</section>
-		
-	</div>
-    <!--Разметка для блока с картой-->
-    
-  </main>	
-	
-<!-- InstanceEndEditable -->
+<!-- TemplateEndEditable -->
 <footer>
     <div class="footer-left">
     
@@ -231,15 +140,15 @@
 
 <!--ПОДКЛЮЧАЕМ СКРИПТЫ-->
 
-<script type="text/javascript" src="slick/slick.min.js"></script>
+<script type="text/javascript" src="../slick/slick.min.js"></script>
 
 <!--ПОДКЛЮЧАЕМ СВОИ СКРИПТЫ-->
-<script type="text/javascript" src="js/header_buttons.js"></script>
+<script type="text/javascript" src="../js/header_buttons.js"></script>
 	
-<script type="text/javascript" src="js/slick-gallery.js"></script>
-<script type="text/javascript" src="js/test.js"></script>
-<script type="text/javascript" src="js/feedback_buttons.js"></script>	
-<script type="text/javascript" src="js/action_menu_cost.js"></script>
+<script type="text/javascript" src="../js/slick-gallery.js"></script>
+<script type="text/javascript" src="../js/test.js"></script>
+<script type="text/javascript" src="../js/feedback_buttons.js"></script>	
+<script type="text/javascript" src="../js/action_menu_cost.js"></script>
 
 </body>	
-<!-- InstanceEnd --></html>
+</html>

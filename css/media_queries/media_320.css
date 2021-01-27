@@ -1,0 +1,31 @@
+@media screen and (max-width: 320px){
+	.main-telephone{
+		padding-top: 0px;
+		padding-bottom: 0px;
+	}
+	.filial-telephone{
+		font-size: 9px;
+    }
+	.logo{
+		min-width: 140px;
+		width: 140px;
+		font-size: 22px;
+	}
+	main{
+	/*margin-top: 75px;*/
+	margin-top: 135px;
+	padding-top: 10px;
+	}
+	.zamer_button,.menu_button,.search{
+		margin-right: 10px;
+	}
+	.search_popup_menu{
+		margin-top: -10px;
+	}
+	.vizov_zamer{
+		top:10px;
+	}
+	.table-point-delivery div,.table-cost-delivery div{
+		font-size: 12px;
+	}
+}

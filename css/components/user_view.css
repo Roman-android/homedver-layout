@@ -1,0 +1,16 @@
+.select-filter, .choice-value{
+	border-bottom: dashed thin #000000;
+	background-color: #fff; 
+}
+.filter_sort_block{
+	display: flex;
+	justify-content: flex-end;
+	margin-bottom: 10px;
+}
+.filter p, .sort p{
+	margin-right: 10px;
+}
+.filter,.sort{
+	display: flex;
+	margin-right: 20px;
+}

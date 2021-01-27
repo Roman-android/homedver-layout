@@ -73,27 +73,6 @@ header {
 	width: 100%;
 	top: 0px;
 }
-.main-telephone {
-	display: flex;
-	align-items: center;
-	height: 50px;
-	background-color: #FFFFFF;
-	padding-top: 10px;
-	padding-bottom: 10px;
-}
-.filial-telephone{
-	width: 33%;
-}
-.filial-telephone p,.filial-telephone a{
-	text-align: center;
-	text-decoration: underline;
-}
-.header-contact-telephone {
-	display: block;
-	color: #000000;
-}
-
-
 .header-inner {
 	display: flex;
 	background-color: #FFFFFF;
@@ -172,7 +151,6 @@ header {
 	display: flex;
 	justify-content: center;
 	height: 90px;
-	z-index: 1;
 	background-color: #c0c0c0;
 	border-right: 2px solid #FFFFFF;
 	border-bottom: 2px solid #FFFFFF;
@@ -184,23 +162,32 @@ header {
 .submenu a {
 	display: flex;
 	align-items: center;
-	justify-content: center;
 	flex-grow: 1;
 	text-decoration: none;
 	padding-left: 10px;
 	padding-right: 10px;
 }
-.submenu a:hover{
-	background-color: #75bc41;
-	color: #000000;
+
+.submenu {
+	z-index: 1;
 }
+
 .menu li:hover{
 	background-color: #C0C0C0;
 }
 .item:hover{
 	color: #000000;
 }
-
+.submenu a:hover{
+	background-color: #75bc41;
+	color: #000000;
+}
+.active-item{
+	border-bottom-color: #75bc41;
+}
+.active-item-test{
+	background-color: red;
+}
 /*КОНЕЦ СТИЛИ ДЛЯ СТРОКИ МЕНЮ (".nav")*/
 
 .separator {
@@ -224,16 +211,20 @@ header {
 	box-sizing: border-box;
 	margin-right: 16px;
 	cursor: pointer;
-}
-.search::before{
-	font-size: 20px;
-	content: "search";
-	font-family: "Material Icons";
+	
+	/*
+	background-image: url(../img/img_search_black.png);
+	background-repeat: no-repeat;
+	background-size: 16px 16px;
+	background-position: 5px;
+	*/
 }
 .search_popup_menu{
 	display: none;
-	top: 0px;
 }
+/*.wrap_top_menu_mobile{
+	display: none;
+}*/
 .search input[type="text"]{
 	border-style: none;
 	border-color: transparent;
@@ -241,10 +232,7 @@ header {
 	width: 95px;
 }
 
-.menu_button,.search>p{
-	display: none;
-}
-.zamer_button{
+.zamer_button,.menu_button,.search>p{
 	display: none;
 }
 /*КНОПКИ ВЫЗОВ ЗАМЕРЩИКА И МЕНЮ*/
@@ -257,9 +245,7 @@ header {
 main {
 	display: flex;
 	align-items: flex-start;
-	/*margin-top: 95px;*/
-	margin-top: 170px;
-	/*padding-top: 15px;*/
+	margin-top: 110px;
 	position: relative;
 }
 
@@ -276,10 +262,6 @@ main {
 	box-sizing: border-box;
 	padding-top: 20px;
 	padding-bottom: 20px;
-	top:15px;
-	
-/*	position: fixed;
-	z-index: 3;*/
 }
 .vizov_zamer h3 {
 	font-size: 14px;
@@ -341,13 +323,6 @@ input.but_send_metric{
 	margin-right: 16px;
 	box-sizing: border-box;
 }
-.link-to-page{
-	margin-top: 10px;
-	margin-bottom: 10px;
-}
-.link-to-page>a{
-	color: #000000;
-}
 .background-sections {
 	background-color: #C0C0C0;
 	border-radius: 10px;
@@ -361,23 +336,19 @@ input.but_send_metric{
 	flex-direction: column;
 	display: flex;
 }
-#window::before{
-/*	content: url(../img/okno.png);
-	background-color: #C21215;*/	
-}
 .icon-provider img{
 	width: 100%;
 	height: auto;
 }
 
-.background-sections#gallery-block {
+.background-sections#gallery {
 	display: flex;
 	position: relative;
 	justify-content: center;
 	padding-right: 15px;
 	padding-left: 15px;
 }
-.background-sections#provider-block {
+.background-sections#provider {
 	display: flex;
 	flex-grow: 1;
 	justify-content: space-between;
@@ -385,7 +356,7 @@ input.but_send_metric{
 	padding-left: 20px;
 
 }
-.background-sections.map-block {
+.background-sections#map {
 	padding-right: 20px;
 	padding-left: 20px;
 	text-align: left;
@@ -473,6 +444,7 @@ input.but_send_metric{
 
 .background-sections p {
 	padding-top: 20px;
+	/* [disabled]padding-bottom: 20px; */
 	margin: 0px;
 	color: #000000;
 }
@@ -487,25 +459,20 @@ input.but_send_metric{
 	background-color: #FFFFFF;
 	border: 2px solid #000000;
 }
-.map {
-	/*height: 100%;*/
+
+#map .map-widget{
 	width: 50%;
-	border: medium solid #24981D;
-	margin-right: 20px;
+	padding-right: 20px;
 }
+#map iframe {
+	width: 100%;
+}
+
 .communication{
 	display: flex; 
 	flex-direction: column;
 	justify-content: center;
-	width: 50%;
 	/*align-items: stretch;*/
-}
-.address{
-	margin-top: 10px;
-	margin-bottom: 10px;
-}
-.addres-text:first-child{
-	margin-top: 10px;
 }
 footer {
 	background-color: #000000;
@@ -521,7 +488,7 @@ footer {
 }
 .communication>div{
 	margin-bottom: 10px;
-	/*flex-grow: 1;*/
+	flex-grow: 1;
 }
 .communication p{
 	cursor: pointer;
@@ -538,10 +505,7 @@ footer {
 .bottom-footer-information a:hover{
 	text-decoration: underline;
 }
-p.contact-telefon{
-	margin-bottom: 10px;
-}
-p.contact-telefon:last-child{
+#map>.communication>div{
 	margin-bottom: 0px;
 }
 
@@ -574,7 +538,7 @@ p.contact-telefon:last-child{
 	margin-top: 10px;
 }
 .left-menu{
-	text-align: center;
+		text-align: center;
 	}
 .feedback_main,.feedback_call,.feedback_watsapp{
 	display: none;
@@ -602,13 +566,13 @@ p.contact-telefon:last-child{
 }
 .item-gallery-product{
 	outline: none;
-	/*border: 1px solid blue;*/
+	border: 1px solid blue;
 }
 .item-gallery-product img{
 	margin-left: auto;
 	margin-right: auto;
 	/*height: 25vw;*/
-	width: 25%;
+	width: 20%;
 	height: auto;
 }
 
@@ -628,7 +592,6 @@ p.contact-telefon:last-child{
 	margin-left: 20px;
 	margin-right: 20px;
 	position: relative;
-	justify-content: center;
 }
 .wrapper-item-info{
 	flex-grow: 1;
@@ -645,21 +608,6 @@ p.contact-telefon:last-child{
 .item-info p{
 	font-size: 16px;
 	padding-top: 0px;
-	padding-bottom: 20px;
-}
-.info_stock{
-	margin-left: 10px;
-	margin-right: 10px;
-	padding-left: 10px;
-	padding-right: 10px;
-	border: 2px solid #000000;
-	border-radius: 10px;
-	background-color: #FFFFFF;
-}
-.duration_stock{
-	text-decoration: underline;
-}
-.desc_stock{
 	padding-bottom: 20px;
 }
 .switch-browse{
@@ -724,6 +672,7 @@ p.contact-telefon:last-child{
     right: 2%;
     z-index: 1;
     margin-top: -3px;
+
 }
 .name-kind-of-item{
 	display: flex;
@@ -739,7 +688,7 @@ select{
 	text-align: center;
 	text-align-last: center;
 	justify-content: center;
-    
+    width: 50%; /* от ширины блока div */
     /*padding: .75rem 2.5rem .75rem 1rem;*//* отступы от текста до рамки */
 	/*height: 40px;*/
     background: #FFFFFF; /* убираем фон */
@@ -748,298 +697,19 @@ select{
     -webkit-appearance: none;/* Chrome */
     -moz-appearance: none;/* Firefox */
     appearance: none;/* убираем дефолнтные стрелочки */
-	
-	/*
-    font-family: inherit; наследует от родителя 
+    font-family: inherit;/* наследует от родителя */
     font-size: 1rem;
-	*/
-    /*color: #444;*/
-	white-space: pre-line;
-	word-break: break-all;
-	word-wrap: break-word;
-	overflow-wrap: break-word;
-}
-select.choice-brend{
-	font-family: inherit;/* наследует от родителя */
-    font-size: 1rem;
-	line-height: 35px;
-	width: 50%; /* от ширины блока div */
-}
-/*СТИЛИ ДЛЯ СТРАНИЦЫ ОКНА*/
-.catalog{
-	display: flex;
-	justify-content: space-around;
-	flex-wrap: wrap;
-}
-.door-item-wrapper{
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	margin-bottom: 20px;
-	color: #000000;
-	text-decoration: none;
-	border: medium solid #000000;
-	border-radius: 10px;
-	padding: 10px;
-	/*background-color: #C0C0C0;*/
-}
-.door-item-wrapper:hover{
-	text-decoration: underline;
-	/*background-color: rgba(192,192,192,0.70);*/
-	/*background-color: rgba(117,188,65,1.00);*/
-	background-color: rgba(192,192,192,1.00)
-}
-.door-item-wrapper>img{
-	/*margin-bottom: 20px;*/
-}
-/*добавляем прозрачность к фото двери при наведении на ".door-item-wrapper"*/
-/*.door-item-wrapper:hover>img{
-	opacity: 0.5;
-}*/
-.door-title {
-	text-transform: uppercase;
-	text-align: center;
-	margin-bottom: 10px;
-	 white-space: pre-wrap;
-    white-space: -moz-pre-wrap;
-    white-space: -o-pre-wrap;
-    word-wrap: break-word;
-}
-.overlay{
-	top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 10;
-    display: none;
-	/* фон затемнения */
-    background-color: rgba(0, 0, 0, 0.65);
-    position: fixed; /* фиксированное поцизионирование */
-    cursor: default; /* тип курсара */
-}
-.overlay:target {
-    display: block;
-}
-.popup{
-	top: 15px;
-	right: 0;
-	left: 50%;
-	font-size: 14px;
-	z-index: 20;
-	margin: 0;
-	width: 80%;
-	max-width: 1000px;
-/*	display: flex;
-	justify-content: space-around;*/
-	/* фиксированное позиционирование, окно стабильно при прокрутке */
-	position: absolute;
-	padding: 15px;
-	border: 2px solid #75bc41;
-	background: #fefefe;
-	/* скругление углов */
-	-webkit-border-radius: 10px;
-	-moz-border-radius: 10px;
-	-ms-border-radius: 4px;
-	border-radius: 10px;
-	/* внешняя тень */
-	-webkit-box-shadow: 0 15px 20px rgba(0,0,0,.22),0 19px 60px rgba(0,0,0,.3);
-	-moz-box-shadow: 0 15px 20px rgba(0,0,0,.22),0 19px 60px rgba(0,0,0,.3);
-	-ms-box-shadow: 0 15px 20px rgba(0,0,0,.22),0 19px 60px rgba(0,0,0,.3);
-	box-shadow: 0 15px 20px rgba(0,0,0,.22),0 19px 60px rgba(0,0,0,.3);
-	-webkit-transform: translate(-50%, -500%);
-	-ms-transform: translate(-50%, -500%);
-	-o-transform: translate(-50%, -500%);
-	transform: translate(-50%, -500%);
-	-webkit-transition: -webkit-transform 0.6s ease-out;
-	-moz-transition: -moz-transform 0.6s ease-out;
-	-o-transition: -o-transform 0.6s ease-out;
-	transition: transform 0.6s ease-out;
-	display: flex;
-	flex-direction: column;
-
-}
-/* активируем модальный блок */
-.overlay:target+.popup {
-    -webkit-transform: translate(-50%, 0);
-    -ms-transform: translate(-50%, 0);
-    -o-transform: translate(-50%, 0);
-    transform: translate(-50%, 0);
-   /* top: 15px;*/
-}
-.popup>img{
-	 /*display: flex;*/
-}
-.popup-inner{
-	display: flex;
-	justify-content: space-between;
-}
-/* формируем кнопку закрытия */
-.close {
-    top: -10px;
-    right: -10px;
-    width: 20px;
-    height: 20px;
-    position: absolute;
-    padding: 0;
-    border: 2px solid #ccc;
-    -webkit-border-radius: 15px;
-    -moz-border-radius: 15px;
-    -ms-border-radius: 15px;
-    -o-border-radius: 15px;
-    border-radius: 15px;
-    background-color: rgba(61, 61, 61, 0.8);
-    -webkit-box-shadow: 0px 0px 10px #000;
-    -moz-box-shadow: 0px 0px 10px #000;
-    box-shadow: 0px 0px 10px #000;
-    text-align: center;
-    text-decoration: none;
-    font: 13px/20px 'Tahoma', Arial, sans-serif;
-    font-weight: bold;
-    -webkit-transition: all ease .8s;
-    -moz-transition: all ease .8s;
-    -ms-transition: all ease .8s;
-    -o-transition: all ease .8s;
-    transition: all ease 1.5s;
-}
-.close:before {
-    color: rgba(255, 255, 255, 0.9);
-    content: "X";
-    text-shadow: 0 -1px rgba(0, 0, 0, 0.9);
-    font-size: 12px;
-}
-.close:hover {
-    background-color: rgba(252, 20, 0, 0.8);
-    -webkit-transform: rotate(360deg);
-    -moz-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
-    transform: rotate(360deg);    
-}
-.window-description{
-	margin-left: 10px;
-	margin-right: 10px;
-	width: 70%;
-}
-.row-item,.row-item-title {
-	display: flex;
-	position: relative;
-	padding-top: 5px;
-	padding-bottom: 5px;
-}
-.row-item-title{
-	width: 70%;
-	align-self: flex-end;
-	margin-right: 10px;
-}
-.column-right.user-choice::after{
-	content: "";
-    display: block;
-    border-style: solid;
-    border-width: 6px 5px 0 5px;
-    border-color: #000 transparent transparent transparent;
-    pointer-events: none;
-    position: absolute;
-    top: 50%;
-    right: 2%;
-    z-index: 21;
-    margin-top: -3px;
-}
-.column-left,.column-right{
-	/*border: thin solid #E1191D;*/
-}
-.column-left{
-	width: 40%;
-}
-.column-right{
-	display: flex;
-	/*align-items: center;*/
-	flex-direction: column;
-	width: 60%;
-	justify-content: center;
-}
-select.choice-value {
-	float: right;
-	outline: none;
-	display: flex;
-	padding-left: 3px;
-	padding-right: 15px;
-/*	text-align: center;
-	text-align-last: center;
-	justify-content: center;*/
-    width: 100%; /* от ширины блока div */
-    /*padding: .75rem 2.5rem .75rem 1rem;*//* отступы от текста до рамки */
-	/*height: 40px;*/
-    background: #FFFFFF; /* убираем фон */
-    border: 1px solid #ccc; /* рамка */
-    border-radius: 3px;/* скругление полей формы */
-    -webkit-appearance: none;/* Chrome */
-    -moz-appearance: none;/* Firefox */
-    appearance: none;/* убираем дефолнтные стрелочки */
-    /*font-family: inherit; наследует от родителя */
-    /*font-size: 0.9rem;*/
     color: #444;
-	/*line-height: 35px;*/
+	line-height: 35px;
 }
-
-/*======================================================*/
-
-/*СТИЛИ ДЛЯ СТРАНИЦЫ ДОСТАВКИ*/
-.background-sections#delivery-block{
-	display: flex;
-	justify-content: space-between;
-	padding-left: 20px;
-	padding-right: 20px;
-}
-.table-delivery-wrapper{
-	border: 2px solid #000000;
-	display: inline-flex;
-}
-/*добавлен table-header*/
-.item-delivery:first-child,.table-header{
-	background-color: #FFFFFF;
-	border-bottom: 2px solid #000000;
-/*	padding-top: 10px;
-	padding-bottom: 10px;*/
-}
-/*добавлен table-header*/
-/*
-.item-delivery,.table-header {
-	padding-top: 10px;
-	padding-left: 20px;
-	padding-bottom: 10px;
-	padding-right: 20px;
-}
-*/
-.table-point-delivery{
-	border-right: 2px solid #000000;
-}
-.table-point-delivery div,.table-cost-delivery div{
-	padding-top: 10px;
-	padding-left: 20px;
-	padding-bottom: 10px;
-	padding-right: 20px
-}
-.cost_door_leaf {
-	margin-top: 10px;
-	margin-bottom: 10px;
-	font-size: 16px;
-	color: red;
-	text-align: center;
-	text-decoration: underline;
-}
-.description_item {
-	margin-top: 20px;
-	text-align: justify;
-}
-
 
 @media screen and (max-width: 1024px) /* and (orientation : portrait) */ /* and (max-aspect-ratio: 13/9) */ {
-		
+	
 	/*ШАПКА САЙТА*/
 	.header-inner{
 		justify-content: space-between;
 	}
-	.menu_button{
+	.zamer_button,.menu_button{
 		display: flex;
 		align-self: center;
 		align-items: center;
@@ -1052,39 +722,6 @@ select.choice-value {
 		padding-top: 10px;
 		padding-bottom: 10px;
 		padding-right: 10px;
-	}
-	.menu_button_active{
-		background-color: #75BC41;		
-	}
-	.zamer_button{
-		padding-left: 30px;
-		background-image: url(../img/img_metering_24.png);
-		background-repeat: no-repeat;
-		background-position: 10px center;
-		display: flex;
-		align-self: center;
-		align-items: center;
-		color: white;
-		background-color: #000000;
-		margin-right: 16px;
-		border-radius: 5px;
-		cursor: pointer;
-		min-height: 24px;
-		padding-top: 10px;
-		padding-bottom: 10px;
-		padding-right: 10px;
-	}
-	.zamer_button_active{
-		padding-left: 0px;
-		background-image: none;
-		background-color: #75bc41;
-		
-	}
-	.zamer_button_active::before{
-		font-size: 20px;
-		content: "close";
-		font-family: "Material Icons";
-		padding-left: 10px;
 	}
 	.zamer_button>p,.menu_button>p,.search>p{
 		margin-top: 0px;
@@ -1095,7 +732,14 @@ select.choice-value {
 		margin-left: 10px;
 	}
 	.search{
-		color: #FFFFFF;
+		display: flex;
+		align-self: center;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		margin-right: 16px;
+		cursor: pointer;
+		
 		align-items: center;
 		border-radius: 5px;
 		border: none;
@@ -1104,21 +748,6 @@ select.choice-value {
 		padding-top: 10px;
 	    padding-bottom: 10px;
 		padding-right: 10px;
-		
-	}
-/*	.search::before{
-		font-size: 20px;
-		content: "search";
-		font-family: "Material Icons";
-	}*/
-	.search_active{
-		background-image: none;
-		background-color: #75bc41;
-	}
-	.search_active::before{
-		font-size: 20px;
-		content: "close";
-		font-family: "Material Icons";
 	}
 	
 	.material-icons.white { color: #ffffff; }
@@ -1126,8 +755,16 @@ select.choice-value {
 	.search > input[type="text"]{
 	display: none;
 	}
+/*	.search{
+		display: none;
+	}*/
 	
-
+	.zamer_button{
+		padding-left: 30px;
+		background-image: url(../img/img_metering_24.png);
+		background-repeat: no-repeat;
+		background-position: 10px center;
+	}
 	
 	/*СТИЛИ ДЛЯ КНОПКИ МЕНЮ ГАМБУРГЕРА*/
 	.c-hamburger {
@@ -1234,26 +871,21 @@ select.choice-value {
 	.transparent_block{
 		display: none;
 		position: absolute;
+		width: 100%;
+		height: 100%;
 		background-color: #9b999c;
 		opacity: .85;
 		z-index: 2;
-		bottom: 0px;
-		right: 0px;
-		left: 0px;
-		top: 0px;
-	}
-	
-	.transparent_block_visible{
-		display: block;
+		top: -15px;
 	}
 	
 	/*СТИЛИ ДЛЯ МЕНЮ ПОИСКА*/
-	.search_popup_menu_active{
-		display: block;
-		position: absolute;
+	.search_popup_menu{
+		position: fixed;
 		z-index: 2;
 		background-color: #c0c0c0;
 		width: 100%;
+		margin-top: -15px;
 		border-bottom-left-radius: 10px;
 		border-bottom-right-radius: 10px;
 		border-left: 2px solid #000000;
@@ -1284,11 +916,9 @@ select.choice-value {
 	/*СТИЛИ ДЛЯ МЕНЮ ВЫЗОВА ЗАМЕРЩИКА*/
 	.vizov_zamer{
 		display: none;
-	}
-	.vizov_zamer_active{
-		display: block;
 		position: absolute;
 		z-index: 2;
+		/*margin-top: -10px;*/
 		margin-left: auto;
 		margin-right: auto;
 		left: 0;
@@ -1298,21 +928,20 @@ select.choice-value {
 	}
 	
 	/*СТИЛИ ДЛЯ БОКОВОГО МЕНЮ*/
+	
 	.wrap_top_menu{
 		display: none;
-		top: 0px;
-	}
-	.wrap_top_menu a{
-		color: #000000;
-	}
-	.wrap_top_menu_active{
-		display: flex;
+		/*display: flex;*/
 		justify-content: center;
 		position: absolute;
 		z-index: 2;
 		width: 100%;
+		margin-top: -15px;
+		/*margin-top: 95px;*/
+		
 		margin-left: 0px;
 	    margin-right: 0px;
+		
 		padding-left: 16px;
 		padding-right: 16px;
 		border-left: 2px solid #000000;
@@ -1325,77 +954,66 @@ select.choice-value {
 	}
 	.menu{
 		flex-direction: column;
-		margin-top: 5px;
 	}
 	.menu>li{
+		margin-top: 15px;
+		margin-bottom: 15px;
+	}
+	.item {
+		/*
+		position: relative;
 		display: flex;
 		flex-grow: 1;
-		flex-direction: column;
-		margin-top: 5px;
-		margin-bottom: 0px;
-	}
-	.menu>li:last-child{
-		margin-bottom: 5px;
-	}
-	.menu a.is-submenu::after{
-	    display: none;
-    }
-	.item {		
+		align-items: center;
+		justify-content: center;
+		text-decoration: none;
+		*/
+		
 		border: 2px solid #000000;
 		background-color: #C0C0C0;
 		border-radius: 5px;
 		height: 50px;
+/*		margin-top: 15px;
+		margin-bottom: 15px;*/
 		font-size: 16px;
 		text-decoration: none;
 		color: #000000;
-		/* justify-content: space-between; */
 	}
-/* 	.item::before,.item::after{
-		display: flex;
-		align-self: stretch;
-		content: "+";
-		padding-left: 15px;
-		padding-top: 8px;
-		padding-right: 15px;
-		font-size: 25px;
-		background-color: #AEAEAE;		
-	} */
-
-	/*добавлено из разрешения глобального - отредактировать*/
+	/*.active{
+		background-color: #1426CC;	
+	}*/
 	.submenu{
-		display: block;
 		padding-left: 30px;
 		padding-right: 30px;
-		position: static;
-		left: 0px;
-	}
-	.submenu li{
-		height: auto;
-		box-sizing: border-box;
-		border: none;
-		margin-top: 5px;
 	}
 	.submenu a{
-		/*justify-content: space-between;*/
 	    background-color:#ddd9d9;
 		text-align: center;
 		font-size: 16px;
+		text-decoration: none;
 		color: #000000;
 		width: 100%;
-		height: 50px;
-		box-sizing: border-box;
+		display: block;
+		padding-top: 15px;
+		padding-bottom: 15px;
 		border: 2px solid #000000;
+		margin-top: 15px;
 		border-radius: 5px;
+		margin-bottom: 15px;
+	}
+	
+	.menu li:hover{
+		background-color: #C0C0C0;
+	}
+	.item:hover{
+		color: #000000;
 	}
 	.submenu a:hover{
 		background-color: #75bc41;
 		color: #000000;
 	}
 	
-	.menu li:hover{
-		background-color: transparent;
-	}
-
+	
 	/*КОНЕЦ ШАПКИ САЙТА*/
 	
 	
@@ -1431,6 +1049,7 @@ select.choice-value {
 		height: 70px;
 		background-color: #75bc41;
 		border-radius: 70px;
+		/*border: 2px solid #000000;*/
 		font-size: 14px;
 		color: #FFFFFF;
 		font-weight: bold;
@@ -1446,12 +1065,14 @@ select.choice-value {
 		height: 50px;
 		background-position: center center;
 	    background-repeat: no-repeat;
+	    /*border: 2px solid #000000;*/
 	    background-size: 35px 35px;
 		background-image:url(../img/telephone.svg);
 	   
 
 	}
 	.feedback_watsapp {
+		/*display: block;*/
 		position: fixed;
 		z-index: 2;
 		bottom: 40px;
@@ -1462,6 +1083,7 @@ select.choice-value {
 		height: 50px;
 		background-position: center center;
 		background-repeat: no-repeat;
+		/*border: 2px solid #000000;*/
 		background-size: 50px 50px;
 		background-image: url(../img/whatsapp_icon-icons.com_66931.svg);
 	}
@@ -1491,13 +1113,11 @@ select.choice-value {
 		width: 176px;
 		font-size: 24px;
 	}
-	.zamer_button>p,.menu_button>p,.search>p{
+	.zamer_button>p,.menu_button>p,.search-mobile>p{
 		display: none;
 	}
 	main{
-		/*margin-top: 75px;*/
-		margin-top: 150px;
-		/*padding-top: 15px;*/
+		margin-top: 90px;
 	}
 	.content_main{
 		margin-left: 10px;
@@ -1535,52 +1155,43 @@ select.choice-value {
 		background-color: #75BC41;
 	}
 	select{
+		float: right;
+		outline: none;
 		display: block;
 		position: relative;
-
+		text-align: center;
+		text-align-last: center;
+		justify-content: center;
 		width: 100%; /* от ширины блока div */
+		background: #FFFFFF; /* убираем фон */
 		border: thin solid #4369B0; /* рамка */
 		border-radius: 5px;/* скругление полей формы */
 	}
-	select.choice-brend{
-		display: block;
-		position: relative;
-		width: 100%; /* от ширины блока div */
-		border: thin solid #4369B0; /* рамка */
-		border-radius: 5px;/* скругление полей формы */
-	}
+	
 	.background-sections{
 		margin-bottom: 10px;
 		padding-top: 10px;
 		padding-bottom: 10px;
 	}
-	.background-sections p {
-		padding-top: 10px;
-		margin: 0px;
-		color: #000000;
-	}
-	.background-sections#gallery-block{
+	.background-sections#gallery{
 		padding-right: 5px;
 	    padding-left: 5px;
 	}
-	.background-sections#provider-block {
-		padding-left: 10px;
-		padding-right: 10px;
-	}
-	.background-sections.map-block{
+	.background-sections#map{
 		flex-direction: column;
 		padding-right: 10px;
 	    padding-left: 10px;
 	}
-
+	.background-sections#provider {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
 	.inner-product-item{
 		display: flex;
 		flex-direction: column;
 		flex-grow: 1;
 	}
-	.desc_stock{
-		padding-bottom: 10px;
-	}
+
 	.gallery_product{
 		width: auto;
 		margin-left: 10px;
@@ -1622,12 +1233,12 @@ select.choice-value {
 	#right-arrow {
 		margin-right: 10px;
 	}
-/*	#map .map-widget{
+	#map .map-widget{
 		width: 100%;
 		padding-right: 0px;
 		padding-bottom: 10px;
 		border: none;
-	}*/
+	}
 	.footer-left {
 		width: 100%;
 		margin-right: 16px;
@@ -1638,17 +1249,9 @@ select.choice-value {
 		display: flex;
 		justify-content: space-around;
 	}
-	.map {
-		height: 80vw;
-		width: 100%;
-		margin-right: 0px;
-		margin-bottom: 10px;
-	}
+
 	.name-company, .address, .contact{
 		flex-grow: 1;
-	}
-	.map-block>.communication>div{
-		margin-bottom: 0px;
 	}
 	.communication{
 		display: flex; 
@@ -1656,12 +1259,10 @@ select.choice-value {
 		justify-content: space-between;
 		align-items: stretch;
 		text-align: center;
-		width: 100%;
 	}
 	.address{
 		border-left: thin solid #FFFFFF;
 		border-right: thin solid #FFFFFF;
-		margin-top: 0px;
 		margin-right: 5px;
 		margin-left: 5px;
 		padding-left: 5px;
@@ -1670,79 +1271,27 @@ select.choice-value {
 	.footer-right{
 		display: none;
 	}
-	/*СТИЛИ ДЛЯ СТРАНИЦЫ ОКНА*/
-	.popup-inner{
-		flex-direction: column;
-	}
-	.row-item-title{
-		width: 100%;
-		margin-right: 0px;
-		padding-top: 0px;
-		padding-bottom: 10px;
-	}
-	.window-description {
-		width: 100%;
-		margin-top: 30px;
-		margin-left: 0px;
-	}
-	.popup-inner>img{
-		align-self: center;
-	}
-	/*СТИЛИ ДЛЯ СТРАНИЦЫ ДОСТАВКИ*/
-	.background-sections#delivery-block{
-		padding-left: 10px;
-		padding-right: 10px;
-	}
-	.table-delivery-wrapper{
-		border: 1px solid #000000;
-	}
-	.table-delivery-wrapper:first-child{
-		margin-right: 5px;
-	}
-	.table-point-delivery{
-		border-right: 1px solid #000000;
-	}
-	.item-delivery:first-child,.table-header{
-		border-bottom: 1px solid #000000;
-	}
-	.table-point-delivery div,.table-cost-delivery div{
-		padding-top: 5px;
-		padding-left: 3px;
-		padding-bottom: 5px;
-		padding-right: 3px;
-		font-size: 12px;
-	}
+
 }
 
 /* landscape styles here */ /* and (min-aspect-ratio: 13/9) */
 @media screen and (max-width: 768px) and (orientation : landscape)and (min-aspect-ratio: 13/9) {
 	.zamer_button>p,.menu_button>p,.search>p{
-		display: block;
+		display: none;
 	}
-	.table-point-delivery div,.table-cost-delivery div {
-		padding-left: 10px;
-		padding-right: 10px;
-		font-size: 16px;
+	.gallery_product{
+		/* width: 60%; */
 	}
 }
 
 @media screen and (max-width: 320px){
-	.main-telephone{
-		padding-top: 0px;
-		padding-bottom: 0px;
-	}
-	.filial-telephone{
-		font-size: 9px;
-    }
 	.logo{
 		min-width: 140px;
 		width: 140px;
 		font-size: 22px;
 	}
 	main{
-		/*margin-top: 75px;*/
-		margin-top: 125px;
-		padding-top: 10px;
+		margin-top: 85px;
 	}
 	.zamer_button,.menu_button,.search{
 		margin-right: 10px;
@@ -1750,10 +1299,6 @@ select.choice-value {
 	.search_popup_menu{
 		margin-top: -10px;
 	}
-	.vizov_zamer{
-		top:10px;
-	}
-	.table-point-delivery div,.table-cost-delivery div{
-		font-size: 12px;
-	}
 }
+
+

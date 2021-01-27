@@ -1,0 +1,187 @@
+@media screen and (max-width: 768px) {/* portrait styles here */
+	body{
+		font-size: 10px;
+	}
+	.header-inner{
+		height: 70px;
+	}
+	.logo{
+		min-width: 176px;
+		width: 176px;
+		font-size: 24px;
+	}
+	.zamer_button>p,.menu_button>p,.search>p{
+		display: none;
+	}
+	main{
+	    margin-top: 160px;
+	}
+	.content_main{
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+	
+	.background-sections{
+		margin-bottom: 10px;
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+	.background-sections p {
+		padding-top: 10px;
+		margin: 0px;
+		color: #000000;
+	}
+	.background-sections#gallery-block{
+		padding-right: 5px;
+	    padding-left: 5px;
+	}
+	.background-sections#provider-block {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	.background-sections.map-block{
+		flex-direction: column;
+		padding-right: 10px;
+	    padding-left: 10px;
+	}
+
+	.inner-product-item{
+		display: flex;
+		flex-direction: column;
+		flex-grow: 1;
+	}
+	.desc_stock{
+		padding-bottom: 10px;
+	}
+	.gallery_product{
+		width: auto;
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+	.item-gallery-product img{
+		margin-left: auto;
+		margin-right: auto;
+		width: 25%;
+		height: auto;
+	}
+	.wrapper-item-info{
+		flex-grow: 1;
+	}
+	.item-info{
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 10px;
+		border-radius: 10px;
+		background-color: #FFFFFF;
+		padding-top: 10px;
+	}
+	.item-info p{
+		padding-top: 0px;
+		padding-bottom: 10px;
+	}
+	.right_part{
+		margin-left: 10px;
+		margin-right: 10px;
+		margin-top: 10px;
+	}
+	.cost-info p{
+		font-size: 16px;
+		padding-top: 10px;
+	}
+	#left-arrow {
+		margin-left: 10px;
+	}
+	#right-arrow {
+		margin-right: 10px;
+	}
+/*	#map .map-widget{
+		width: 100%;
+		padding-right: 0px;
+		padding-bottom: 10px;
+		border: none;
+	}*/
+	.footer-left {
+		width: 100%;
+		margin-right: 16px;
+		/*border: thin solid #EF0D11;*/
+		font-size: 10px;
+    }
+	.bottom-footer-information {
+		display: flex;
+		justify-content: space-around;
+	}
+	.map {
+		height: 80vw;
+		width: 100%;
+		margin-right: 0px;
+		margin-bottom: 10px;
+	}
+	.name-company, .address, .contact{
+		flex-grow: 1;
+	}
+	.map-block>.communication>div{
+		margin-bottom: 0px;
+	}
+	.communication{
+		display: flex; 
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: stretch;
+		text-align: center;
+		width: 100%;
+	}
+	.address{
+		border-left: thin solid #FFFFFF;
+		border-right: thin solid #FFFFFF;
+		margin-top: 0px;
+		margin-right: 5px;
+		margin-left: 5px;
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+	.footer-right{
+		display: none;
+	}
+	/*СТИЛИ ДЛЯ СТРАНИЦЫ ОКНА*/
+	.popup-inner{
+		flex-direction: column;
+	}
+	.row-item-title{
+		width: 100%;
+		margin-right: 0px;
+		padding-top: 0px;
+		padding-bottom: 10px;
+	}
+	.window-description {
+		width: 100%;
+		margin-top: 30px;
+		margin-left: 0px;
+	}
+	.popup-inner>img{
+		align-self: center;
+	}
+	/*СТИЛИ ДЛЯ СТРАНИЦЫ ДОСТАВКИ*/
+	.background-sections#delivery-block{
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	.table-delivery-wrapper{
+		border: 1px solid #000000;
+	}
+	.table-delivery-wrapper:first-child{
+		margin-right: 5px;
+	}
+	.table-point-delivery{
+		border-right: 1px solid #000000;
+	}
+	.item-delivery:first-child,.table-header{
+		border-bottom: 1px solid #000000;
+	}
+	.table-point-delivery div,.table-cost-delivery div{
+		padding-top: 5px;
+		padding-left: 3px;
+		padding-bottom: 5px;
+		padding-right: 3px;
+		font-size: 12px;
+	}
+}
