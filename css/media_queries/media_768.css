@@ -28,7 +28,7 @@
 	}
 	.background-sections p {
 		padding-top: 10px;
-		margin: 0px;
+		margin: 0;
 		color: #000000;
 	}
 	.background-sections#gallery-block{
@@ -76,7 +76,7 @@
 		padding-top: 10px;
 	}
 	.item-info p{
-		padding-top: 0px;
+		padding-top: 0;
 		padding-bottom: 10px;
 	}
 	.right_part{
@@ -113,14 +113,14 @@
 	.map {
 		height: 80vw;
 		width: 100%;
-		margin-right: 0px;
+		margin-right: 0;
 		margin-bottom: 10px;
 	}
 	.name-company, .address, .contact{
 		flex-grow: 1;
 	}
 	.map-block>.communication>div{
-		margin-bottom: 0px;
+		margin-bottom: 0;
 	}
 	.communication{
 		display: flex; 
@@ -133,7 +133,7 @@
 	.address{
 		border-left: thin solid #FFFFFF;
 		border-right: thin solid #FFFFFF;
-		margin-top: 0px;
+		margin-top: 0;
 		margin-right: 5px;
 		margin-left: 5px;
 		padding-left: 5px;
@@ -148,14 +148,14 @@
 	}
 	.row-item-title{
 		width: 100%;
-		margin-right: 0px;
-		padding-top: 0px;
+		margin-right: 0;
+		padding-top: 0;
 		padding-bottom: 10px;
 	}
 	.window-description {
 		width: 100%;
 		margin-top: 30px;
-		margin-left: 0px;
+		margin-left: 0;
 	}
 	.popup-inner>img{
 		align-self: center;

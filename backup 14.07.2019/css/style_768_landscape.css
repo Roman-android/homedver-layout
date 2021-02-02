@@ -1,7 +1,0 @@
-@charset "utf-8";
-	
-@media screen and (max-width : 768px) and (orientation : landscape){
-	.header-inner{
-		background-color:green;
-	}
-}

@@ -23,7 +23,7 @@
 	}
 	.zamer_button{
 		padding-left: 30px;
-		background-image: url(../img/img_metering_24.png);
+		background-image: url(../../img/img_metering_24.png);
 		background-repeat: no-repeat;
 		background-position: 10px center;
 		display: flex;
@@ -52,12 +52,9 @@
 		padding-left: 10px;
 	}
 	.zamer_button>p,.menu_button>p,.search>p{
-		margin-top: 0px;
-		margin-right: 0px;
-		margin-bottom: 0px;
 		display: block;
 		color: white;
-		margin-left: 10px;
+		margin: 0 0 0 10px;
 	}
 	.search{
 		color: #FFFFFF;
@@ -108,7 +105,7 @@
 		text-indent: -9999px;
 		appearance: none;
 		box-shadow: none;
-		border-radius: none;
+		border-radius: 0;
 		border: none;
 		cursor: pointer;
 		transition: background 0.3s;
@@ -121,8 +118,8 @@
 		display: block;
 		position: absolute;
 		top: 9px;
-		left: 0px;
-		right: 0px;
+		left: 0;
+		right: 0;
 		height: 3px;
 		background: white;
 	}
@@ -200,10 +197,10 @@
 		background-color: #9b999c;
 		opacity: .85;
 		z-index: 2;
-		bottom: 0px;
-		right: 0px;
-		left: 0px;
-		top: 0px;
+		bottom: 0;
+		right: 0;
+		left: 0;
+		top: 0;
 	}
 	
 	.transparent_block_visible{
@@ -239,9 +236,9 @@
 		font-size: 18px;
 		flex-grow: 1;
 		border-left: 2px solid #000000;
-		margin: 0px;
-		border-radius: 0px;
-		padding: 0px;
+		margin: 0;
+		border-radius: 0;
+		padding: 0;
 	}
 	
 	/*СТИЛИ ДЛЯ МЕНЮ ВЫЗОВА ЗАМЕРЩИКА*/
@@ -263,7 +260,7 @@
 	/*СТИЛИ ДЛЯ БОКОВОГО МЕНЮ*/
 	.wrap_top_menu{
 		display: none;
-		top: 0px;
+		top: 0;
 	}
 	.wrap_top_menu a{
 		color: #000000;
@@ -274,8 +271,8 @@
 		position: absolute;
 		z-index: 2;
 		width: 100%;
-		margin-left: 0px;
-	    margin-right: 0px;
+		margin-left: 0;
+	    margin-right: 0;
 		padding-left: 16px;
 		padding-right: 16px;
 		border-left: 2px solid #000000;
@@ -295,7 +292,7 @@
 		flex-grow: 1;
 		flex-direction: column;
 		margin-top: 5px;
-		margin-bottom: 0px;
+		margin-bottom: 0;
 	}
 	.menu>li:last-child{
 		margin-bottom: 5px;
@@ -330,7 +327,7 @@
 		padding-left: 30px;
 		padding-right: 30px;
 		position: static;
-		left: 0px;
+		left: 0;
 	}
 	.submenu li{
 		height: auto;
@@ -410,7 +407,7 @@
 		background-position: center center;
 	    background-repeat: no-repeat;
 	    background-size: 35px 35px;
-		background-image:url(../img/telephone.svg);
+		background-image:url(../../img/telephone.svg);
 	   
 
 	}
@@ -426,7 +423,7 @@
 		background-position: center center;
 		background-repeat: no-repeat;
 		background-size: 50px 50px;
-		background-image: url(../img/whatsapp_icon-icons.com_66931.svg);
+		background-image: url(../../img/whatsapp_icon-icons.com_66931.svg);
 	}
 	
 }
