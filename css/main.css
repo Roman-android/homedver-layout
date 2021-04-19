@@ -8,13 +8,12 @@
 
 @import '/css/reset/reset.css';
 
-@import '/css/components/user_view.css';
-
 @import '/css/components/main/main_gallery.css';
 @import '/css/components/main/main_service.css';
 
 @import '/css/components/product/product_windows.css';
 @import '/css/components/delivery/delivery_table.css';
+@import '/css/components/delivery/delivery.css';
 @import '/css/components/stockes/stockes_tables.css';
 
 @import '/css/containers/section.css';

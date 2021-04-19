@@ -160,6 +160,15 @@
 	.popup-inner>img{
 		align-self: center;
 	}
+
+	/*TODO added 13.04.2021*/
+	.popup{
+		flex-wrap: wrap;
+	}
+	.full-img-block{
+		margin-right: 0;
+	}
+
 	/*СТИЛИ ДЛЯ СТРАНИЦЫ ДОСТАВКИ*/
 	.background-sections#delivery-block{
 		padding-left: 10px;

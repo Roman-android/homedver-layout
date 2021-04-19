@@ -5,7 +5,7 @@
       <paths name="develop">
         <serverdata>
           <mappings>
-            <mapping deploy="/" local="$PROJECT_DIR$/../develop" web="" />
+            <mapping deploy="/" local="$PROJECT_DIR$" web="" />
           </mappings>
         </serverdata>
       </paths>
@@ -16,7 +16,7 @@
           </mappings>
         </serverdata>
       </paths>
-      <paths name="server_test_cms">
+      <paths name="test_cms">
         <serverdata>
           <mappings>
             <mapping local="$PROJECT_DIR$" web="/" />

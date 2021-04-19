@@ -19,7 +19,7 @@
 	text-transform: uppercase;
 	text-align: center;
 	margin-bottom: 10px;
-	white-space: pre-wrap;
+	 white-space: pre-wrap;
     white-space: -moz-pre-wrap;
     white-space: -o-pre-wrap;
     word-wrap: break-word;
@@ -48,6 +48,8 @@
 	margin: 0;
 	width: 80%;
 	max-width: 1000px;
+/*	display: flex;
+	justify-content: space-around;*/
 	/* фиксированное позиционирование, окно стабильно при прокрутке */
 	position: absolute;
 	padding: 15px;
@@ -72,8 +74,7 @@
 	-o-transition: -o-transform 0.6s ease-out;
 	transition: transform 0.6s ease-out;
 	display: flex;
-    justify-content: space-around;
-
+	flex-direction: column;
 
 }
 /* активируем модальный блок */
@@ -84,22 +85,12 @@
     transform: translate(-50%, 0);
    /* top: 15px;*/
 }
-/*.popup>img{
-	 !*display: flex;*!
+.popup>img{
+	 /*display: flex;*/
 }
 .popup-inner{
 	display: flex;
 	justify-content: space-between;
-}*/
-.full-img-block{
-    display: flex;
-    margin-right: 30px;
-
-}
-
-.description-block{
-    display: flex;
-    flex-direction: column;
 }
 /* формируем кнопку закрытия */
 .close {
@@ -143,17 +134,20 @@
     -o-transform: rotate(360deg);
     transform: rotate(360deg);    
 }
-
+.window-description{
+	margin-left: 10px;
+	margin-right: 10px;
+	width: 70%;
+}
 .row-item,.row-item-title {
-	/*display: flex;*/
+	display: flex;
 	position: relative;
 	padding-top: 5px;
 	padding-bottom: 5px;
 }
 .row-item-title{
-	/*width: 70%;*/
-    display: flex;
-	/*align-self: flex-end;*/
+	width: 70%;
+	align-self: flex-end;
 	margin-right: 10px;
 }
 .column-right.user-choice::after{

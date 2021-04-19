@@ -22,7 +22,6 @@
 		background-color: #75BC41;		
 	}
 	.zamer_button{
-		padding-left: 30px;
 		background-image: url(../../img/img_metering_24.png);
 		background-repeat: no-repeat;
 		background-position: 10px center;
@@ -35,12 +34,10 @@
 		border-radius: 5px;
 		cursor: pointer;
 		min-height: 24px;
-		padding-top: 10px;
-		padding-bottom: 10px;
-		padding-right: 10px;
+		padding: 10px 10px 10px 30px;
 	}
 	.zamer_button_active{
-		padding-left: 0px;
+		padding-left: 0;
 		background-image: none;
 		background-color: #75bc41;
 		
@@ -48,7 +45,7 @@
 	.zamer_button_active::before{
 		font-size: 20px;
 		content: "close";
-		font-family: "Material Icons";
+		font-family: "Material Icons", serif;
 		padding-left: 10px;
 	}
 	.zamer_button>p,.menu_button>p,.search>p{
@@ -62,11 +59,8 @@
 		border-radius: 5px;
 		border: none;
 		background-color: #000000;
-		padding-left: 10px;
-		padding-top: 10px;
-	    padding-bottom: 10px;
-		padding-right: 10px;
-		
+		padding: 10px;
+
 	}
 /*	.search::before{
 		font-size: 20px;
@@ -80,7 +74,7 @@
 	.search_active::before{
 		font-size: 20px;
 		content: "close";
-		font-family: "Material Icons";
+		font-family: "Material Icons", serif;
 	}
 	
 	.material-icons.white { color: #ffffff; }
@@ -94,10 +88,7 @@
 		display: block;
 		position: relative;
 		overflow: hidden;
-		margin-top: 0;
-		margin-right: 0;
-		margin-left: 10px;
-		margin-bottom: 0;
+		margin: 0 0 0 10px;
 		padding: 0;
 		width: 20px;
 		height: 21px;
